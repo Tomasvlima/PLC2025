@@ -1,7 +1,6 @@
 # TPC2
 O objetivo deste trabalho é fazer um conversor de MarkDown para HTML, em Python.
 
-**AUTOR: Francisco Bonjardim Dias, A108561**
 
 # Resolução
 [codigo](tp2.py)
@@ -63,3 +62,4 @@ Este é um <b>exemplo</b> e este é um <i>teste</i>.
 </ol>
 Como pode ser consultado em <a href="http://www.uc.pt">página da UC</a> 
 Como se vê na imagem seguinte: <img src="http://www.coellho.com" alt="imagem dum coelho"/> ...
+
