@@ -1,0 +1,53 @@
+start
+pushi 0
+pushi 0
+pushi 0
+jump L1
+L1:
+pushs "--- Programa Soma Ate N ---"
+writes
+pushs "\n"
+writes
+pushs "Introduza o valor de N: "
+writes
+read
+atoi
+storeg 1
+pushi 0
+storeg 2
+pushi 1
+storeg 0
+L2:
+pushg 0
+pushg 1
+infeq
+jz L3
+pushg 2
+pushg 0
+add
+storeg 2
+pushg 0
+pushi 1
+add
+storeg 0
+jump L2
+L3:
+pushs "--- Resultado ---"
+writes
+pushs "\n"
+writes
+pushs "A soma de 1 ate "
+writes
+pushg 1
+writei
+pushs " e: "
+writes
+pushg 2
+writei
+pushs "\n"
+writes
+pushs "-----------------"
+writes
+pushs "\n"
+writes
+stop

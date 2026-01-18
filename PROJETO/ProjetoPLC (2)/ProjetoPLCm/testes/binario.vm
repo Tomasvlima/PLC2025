@@ -1,0 +1,66 @@
+start
+pushs "0"
+pushi 0
+jump L1
+fbintoint:
+pushi 0
+pushi 0
+pushi 0
+pushi 0
+storel 1
+pushi 1
+storel 2
+pushl -1
+strlen
+storel 0
+L2:
+pushl 0
+pushi 1
+supeq
+jz L3
+pushl -1
+pushl 0
+pushi 1
+sub
+charat
+pushi 49
+equal
+jz L4
+pushl 1
+pushl 2
+add
+storel 1
+L4:
+pushl 2
+pushi 2
+mul
+storel 2
+pushl 0
+pushi 1
+sub
+storel 0
+jump L2
+L3:
+pushl 1
+storel -2
+return
+L1:
+pushs "Introduza uma string binária:"
+writes
+pushs "\n"
+writes
+read
+storeg 0
+pushi 0
+pushg 0
+pusha fbintoint
+call
+pop 1
+storeg 1
+pushs "O valor inteiro correspondente é: "
+writes
+pushg 1
+writei
+pushs "\n"
+writes
+stop

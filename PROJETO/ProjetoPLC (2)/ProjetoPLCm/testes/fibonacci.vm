@@ -1,0 +1,61 @@
+start
+pushi 0
+pushi 0
+pushi 0
+pushi 0
+pushi 0
+jump L1
+L1:
+pushs "Quantos termos da sequencia de Fibonacci queres?"
+writes
+pushs "\n"
+writes
+read
+atoi
+storeg 0
+pushi 0
+storeg 2
+pushi 1
+storeg 3
+pushs "Sequencia: "
+writes
+pushg 2
+writei
+pushs ", "
+writes
+pushg 3
+writei
+pushi 3
+storeg 1
+L2:
+pushg 1
+pushg 0
+infeq
+jz L3
+pushg 2
+pushg 3
+add
+storeg 4
+pushs ", "
+writes
+pushg 4
+writei
+pushg 3
+storeg 2
+pushg 4
+storeg 3
+pushg 1
+pushi 1
+add
+storeg 1
+jump L2
+L3:
+pushs ""
+writes
+pushs "\n"
+writes
+pushs "Fim do programa."
+writes
+pushs "\n"
+writes
+stop
