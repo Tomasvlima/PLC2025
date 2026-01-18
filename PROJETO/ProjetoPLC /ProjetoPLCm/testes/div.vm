@@ -1,0 +1,42 @@
+start
+pushi 0
+pushi 0
+pushi 0
+jump L1
+L1:
+pushs "--- Teste de Divisao Inteira ---"
+writes
+pushs "\n"
+writes
+pushs "Introduza o Numerador: "
+writes
+read
+atoi
+storeg 0
+pushs "Introduza o Denominador: "
+writes
+read
+atoi
+storeg 1
+pushg 1
+pushi 0
+equal
+jz L2
+pushs "Erro: Nao e possivel dividir por zero!"
+writes
+pushs "\n"
+writes
+jump L3
+L2:
+pushg 0
+pushg 1
+div
+storeg 2
+pushs "Resultado da divisao: "
+writes
+pushg 2
+writei
+pushs "\n"
+writes
+L3:
+stop
