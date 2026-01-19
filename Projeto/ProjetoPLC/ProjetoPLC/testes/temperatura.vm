@@ -1,0 +1,46 @@
+start
+pushi 0
+pushi 0
+jump L1
+L1:
+pushs "--- Conversor Celsius -> Fahrenheit ---"
+writes
+pushs "\n"
+writes
+pushs "Introduza a temperatura em Celsius: "
+writes
+read
+atoi
+storeg 0
+pushg 0
+pushi 9
+mul
+storeg 1
+pushg 1
+pushi 5
+div
+storeg 1
+pushg 1
+pushi 32
+add
+storeg 1
+pushs "Temperatura em Fahrenheit: "
+writes
+pushg 1
+writei
+pushs "\n"
+writes
+pushg 1
+pushi 90
+sup
+jz L2
+pushs "Uau! Esta muito calor."
+writes
+pushs "\n"
+writes
+L2:
+pushs "---------------------------------------"
+writes
+pushs "\n"
+writes
+stop
